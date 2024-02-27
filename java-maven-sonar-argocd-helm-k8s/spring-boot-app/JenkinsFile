@@ -9,7 +9,6 @@ stages {
     stage('Checkout') {
       steps {
         sh 'echo passed'
-        git branch: 'main', url: 'https://github.com/Akamardeep/Jenkins-Zero-To-Hero.git'
       }
     }
 
