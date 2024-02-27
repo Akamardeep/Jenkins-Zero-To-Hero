@@ -5,12 +5,12 @@ pipeline {
       args '--user root -v /var/run/docker.sock:/var/run/docker.sock' // mount Docker socket to access the host's Docker daemon
     }
   }
-stages {
-    stage('Checkout') {
-      steps {
-        sh 'echo passed'
-      }
+stage('Checkout') {
+    steps {
+        checkout([$class: 'GitSCM', branches: [[name: 'main']], userRemoteConfigs: [[url: 'https://github.com/Akamardeep/Jenkins-Zero-To-Hero']]])
     }
+}
+
 
     stage('Build and Test') {
       steps {
