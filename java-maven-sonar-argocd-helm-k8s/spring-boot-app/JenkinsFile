@@ -11,7 +11,7 @@ pipeline {
             git(branch: 'main', url: 'https://github.com/Akamardeep/Jenkins-Zero-To-Hero')
         }
     }
-}
+
     stage('Build and Test') {
       steps {
         sh 'ls -ltr'
